@@ -4,7 +4,6 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    runtime: python
+    startCommand: gunicorn app:app
     region: oregon
     branch: main
